@@ -11,7 +11,7 @@ namespace SassDemo {
             var scriptTransformer = new ScriptTransformer();
             var nullOrderer = new NullOrderer();
 
-            var commonStylesBundle = new Bundle("~/Bundles/Styles");
+            var commonStylesBundle = new Bundle("~/bundles/styles");
             commonStylesBundle.Include(
                 //               "~/Content/Fonts.css",
                 //               "~/Content/Site.css",
@@ -31,6 +31,15 @@ namespace SassDemo {
             commonStylesBundle.Orderer = nullOrderer;
             bundles.Add(commonStylesBundle);
 
+            var scriptsBundle = new Bundle("~/bundles/scripts");
+            scriptsBundle.Include(
+                "~/Content/Scripts/example.coffee",
+                "~/Content/Scripts/example.ts"
+                );
+            scriptsBundle.Builder = nullBuilder;
+            scriptsBundle.Transforms.Add(scriptTransformer);
+            scriptsBundle.Orderer = nullOrderer;
+            bundles.Add(scriptsBundle);
         }
     }
 }
