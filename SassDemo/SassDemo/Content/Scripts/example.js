@@ -1,9 +1,9 @@
 ﻿var TypeScriptGreeter = (function () {
-    function TypeScriptGreeter(name) {
-        this.name = name;
+    function TypeScriptGreeter(greeting) {
+        this.greeting = greeting;
     }
     TypeScriptGreeter.prototype.greet = function (name) {
-        return "Hello, " + this.name + " (from TypeScript!)";
+        return this.greeting + ", " + name + " (from TypeScript)";
     };
     return TypeScriptGreeter;
 })();

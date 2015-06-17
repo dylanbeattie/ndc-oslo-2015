@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width" />
     <title>NDC Oslo SASS Demo</title>
     @Styles.Render("~/bundles/styles")
-    @Scripts.Render("~/bundles/scripts")
 </head>
 <body>
     <header>SASS, TypeScript and CoffeeScript demos</header>
@@ -13,5 +12,11 @@
         @RenderBody()
     </section>
     <footer>@@dylanbeattie / NDC Oslo 2015</footer>
+
+    @Scripts.Render("~/bundles/scripts/examples")
+    @Scripts.Render("~/bundles/scripts/jquery")
+
+    @RenderSection("scripts", false)
+
 </body>
 </html>

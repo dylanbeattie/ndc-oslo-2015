@@ -12,26 +12,14 @@ namespace SassDemo {
             var nullOrderer = new NullOrderer();
 
             var commonStylesBundle = new Bundle("~/bundles/styles");
-            commonStylesBundle.Include(
-                //               "~/Content/Fonts.css",
-                //               "~/Content/Site.css",
-                //               "~/Content/BundleTransformer.css",
-                //               "~/AlternativeContent/css/TestCssComponentsPaths.css",
-                //               "~/Content/themes/base/jquery.ui.core.css",
-                //               "~/Content/themes/base/jquery.ui.theme.css",
-                //               "~/Content/themes/base/jquery.ui.resizable.css",
-                //               "~/Content/themes/base/jquery.ui.button.css",
-                //               "~/Content/themes/base/jquery.ui.dialog.css",
-                //               "~/Content/TestTranslators.css",
-                //               "~/Content/less/TestLess.less",
-                //               "~/Content/sass/TestSass.sass",
-                "~/Content/Styles/Styles.scss");
+            commonStylesBundle.Include("~/Content/Styles/Styles.scss");
             commonStylesBundle.Builder = nullBuilder;
             commonStylesBundle.Transforms.Add(styleTransformer);
             commonStylesBundle.Orderer = nullOrderer;
             bundles.Add(commonStylesBundle);
 
-            var scriptsBundle = new Bundle("~/bundles/scripts");
+
+            var scriptsBundle = new Bundle("~/bundles/scripts/examples");
             scriptsBundle.Include(
                 "~/Content/Scripts/example.coffee",
                 "~/Content/Scripts/example.ts"
@@ -40,6 +28,12 @@ namespace SassDemo {
             scriptsBundle.Transforms.Add(scriptTransformer);
             scriptsBundle.Orderer = nullOrderer;
             bundles.Add(scriptsBundle);
+
+            var jQueryBundle = new Bundle("~/bundles/scripts/jquery");
+            jQueryBundle.Include("~/scripts/jquery-2.1.4.js");
+            bundles.Add(jQueryBundle);
+
+
         }
     }
 }

@@ -1,5 +1,21 @@
 ﻿<h1>Hello Oslo!</h1>
 <p>Dylan's SASS, TypeScript and CoffeeScript examples</p>
-<h2 id="message">...</h2>
+<div id="message">...</div>
 <input type="button" id="coffeescript-button" value="Go CoffeeScript!"/>
 <input type="button" id="typescript-button" value="Go TypeScript!"/>
+
+@section scripts {
+    <script type="text/javascript">
+        $(function() {
+            $("#coffeescript-button").click(function() {
+                $("#message").html(greetWithCoffee("Oslo"));
+            });
+
+            $("#typescript-button").click(function() {
+                var greeter = new TypeScriptGreeter("Hello");
+                $("#message").html(greeter.greet("Oslo"));
+            });
+        });
+
+    </script>
+}

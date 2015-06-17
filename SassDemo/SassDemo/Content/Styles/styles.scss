@@ -20,3 +20,13 @@ header, footer {
         background-color: $site-color;
         color: #fff;
 }
+
+div#message {
+    padding: 16px;
+    border: 1px solid $site-color;
+    border-radius: $border-radius;
+    margin: 16px;
+    font-size: 140%;
+    font-weight: bold;
+    text-align: center;
+}

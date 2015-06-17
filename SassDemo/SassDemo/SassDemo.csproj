@@ -191,8 +191,12 @@
     </None>
     <Content Include="asp_net_css_demo.html" />
     <Content Include="Content\Stylesheet.aspx" />
+    <Content Include="Content\Scripts\greeting.coffee" />
     <None Include="Content\Styles\_reset.scss" />
     <Content Include="Global.asax" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -202,6 +206,7 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\Scripts.cshtml" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -226,7 +231,7 @@
     <Content Include="Content\Scripts\example.coffee" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Content\Scripts\example.ts" />
+    <TypeScriptCompile Include="Content\Scripts\greeting.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
