@@ -12,5 +12,9 @@ namespace SassDemo.Controllers {
         public ActionResult Index() {
             return (View());
         }
+
+        public ActionResult Scripts() {
+            return (View());
+        }
     }
 }

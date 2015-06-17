@@ -1,6 +1,22 @@
-﻿$site_color: #0000cc;
+﻿@import 'reset';
+
+$border-radius: 5px;
+$site-color: #006699;
 
 body {
-    color: $site_color;
-    background-color: #ffffff - $site_color;
+    background-color: #ffffff;
+    font-family: Calibri;
+}
+
+header, section, footer {
+    width : 600px;
+    margin : 32px auto;
+    padding: 16px;
+    border-radius: $border-radius;
+    border: 2px solid darken($site-color, 5%);
+}
+
+header, footer {
+        background-color: $site-color;
+        color: #fff;
 }

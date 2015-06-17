@@ -29,4 +29,4 @@ alert "I knew it!" if elvis?
 # Array comprehensions:
 cubes = (math.cube num for num in list)
 
-greetWithCoffee = (name) => "CoffeeScript says hello, " + name + "!"
+greetWithCoffee = (name) => "Hello, " + name + " (from CoffeeScript)"
