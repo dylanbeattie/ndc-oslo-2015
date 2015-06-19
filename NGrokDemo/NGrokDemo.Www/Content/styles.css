@@ -1,0 +1,28 @@
+﻿body {
+    font-family: Calibri;
+}
+
+header, section, footer {
+    margin: 10px auto;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+header, footer {
+    background-color: #006699;
+    color: #fff;
+}
+
+div#result {
+    font-size: 200%;
+    font-weight: bold;
+    color: #006699;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NDC Oslo NGrok Demo</title>
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/content/styles.css")" />
+</head>
+<body>
+    <header>NGrok and RunScope demo</header>
+    <section>
+        @RenderBody()
+    </section>
+    <footer>@@dylanbeattie / NDC Oslo 2015</footer>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-2.1.4.js")"></script>
+    @RenderSection("scripts", false)
+
+</body>
+</html>

@@ -1,12 +1,15 @@
 ﻿@import 'reset';
 
-$border-radius: 5px;
-$site-color: #006699;
+$border-radius: 25px;
+$site-color: #66ff66;
 
 body {
     background-color: #ffffff;
     font-family: Calibri;
 }
+
+// This is a SASS comment and is removed at compile time
+/* This is a CSS-style comment */
 
 header, section, footer {
     width : 600px;
@@ -18,7 +21,7 @@ header, section, footer {
 
 header, footer {
         background-color: $site-color;
-        color: #fff;
+        color:  #fff - $site-color;
 }
 
 div#message {

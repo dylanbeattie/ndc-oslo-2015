@@ -1,0 +1,41 @@
+﻿@model NGrokDemo.Www.Controllers.HelloModel
+
+<h1>NGrok Demo</h1>
+<form id="the-form">
+    <p>
+        <label for="name">What's your name?</label><br/>
+        <input type="text" name="name" id="name" placeholder="name" value="@Model.Name" />
+    </p>
+    <p>
+        <label for="language-select">Language:</label><br />
+        <select id="language-select">
+            <option value="no" @(Model.Language == "no" ? "selected=\"selected\"" : "")>Norsk</option>
+            <option value="fr" @(Model.Language == "fr" ? "selected=\"selected\"" : "")>Francais</option>
+            <option value="tlh" @(Model.Language == "tlh" ? "selected=\"selected\"" : "")>Klingon</option>
+            <option value="en" @(Model.Language == "en" ? "selected=\"selected\"" : "")>English</option>
+        </select>
+    </p>
+    <p>
+        <input type="button" id="go-button" value="Go!" />
+    </p>
+</form>
+<hr />
+<div id="result">(your results will appear here...)</div>
+@section scripts {
+    <script type="text/javascript">
+        function callApi() {
+            var name = $("#name").val();
+            var language = $('#language-select').val();
+            var url = '/api/hello/' + name + '?language=' + language;
+            $.getJSON(url, function (data) {
+                $("#result").html(data.greeting);
+            });
+            return (false);
+        }
+
+        $(function () {
+            $("#go-button").click(callApi);
+            $("#the-form").submit(callApi);
+        });
+    </script>
+}

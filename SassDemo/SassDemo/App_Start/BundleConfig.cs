@@ -21,15 +21,15 @@ namespace SassDemo {
 
             var scriptsBundle = new Bundle("~/bundles/scripts/examples");
             scriptsBundle.Include(
-                "~/Content/Scripts/example.coffee",
-                "~/Content/Scripts/example.ts"
+                "~/Content/Scripts/greeting.coffee",
+                "~/Content/Scripts/greeting.ts"
                 );
             scriptsBundle.Builder = nullBuilder;
             scriptsBundle.Transforms.Add(scriptTransformer);
             scriptsBundle.Orderer = nullOrderer;
             bundles.Add(scriptsBundle);
 
-            var jQueryBundle = new Bundle("~/bundles/scripts/jquery");
+            var jQueryBundle = new Bundle("~/bundles/scripts/jquery");  
             jQueryBundle.Include("~/scripts/jquery-2.1.4.js");
             bundles.Add(jQueryBundle);
 
